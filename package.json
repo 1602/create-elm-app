@@ -1,15 +1,15 @@
 {
-  "name": "create-elm-app",
+  "name": "create-elm-webcomponent",
   "description": "Elm apps with zero configuration",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com>",
   "bin": {
-    "elm-app": "./bin/elm-app-cli.js",
-    "create-elm-app": "./bin/create-elm-app-cli.js"
+    "elm-webcomponent": "./bin/elm-app-cli.js",
+    "create-elm-webcomponent": "./bin/create-elm-app-cli.js"
   },
   "bugs": {
-    "url": "https://github.com/halfzebra/create-elm-app/issues",
-    "email": "eduard.kyvenko@gmail.com"
+    "url": "https://github.com/1602/create-elm-app/issues",
+    "email": "rpm1602@gmail.com"
   },
   "config": {
     "commitizen": {
@@ -53,6 +53,7 @@
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.21.0",
     "sw-precache-webpack-plugin": "^0.11.5",
+    "to-string-loader": "^1.1.5",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "url-loader": "^1.0.1",
     "webpack": "^4.2.0",

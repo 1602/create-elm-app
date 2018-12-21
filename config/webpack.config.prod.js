@@ -111,12 +111,12 @@ module.exports = {
     ],
     // Automatically split vendor and commons
     // https://twitter.com/wSokra/status/969633336732905474
-    splitChunks: {
-      chunks: 'all'
-    },
+    // splitChunks: {
+      // chunks: 'all'
+    // },
     // Keep the runtime chunk seperated to enable long term caching
     // https://twitter.com/wSokra/status/969679223278505985
-    runtimeChunk: true
+    // runtimeChunk: true
   },
   resolve: {
     modules: ['node_modules'],
@@ -137,6 +137,7 @@ module.exports = {
           presets: [
             [
               require.resolve('@babel/preset-env'),
+              // ["env", { "targets": { "chrome": 52 }}],
               {
                 // `entry` transforms `@babel/polyfill` into individual requires for
                 // the targeted browsers. This is safer than `usage` which performs
@@ -226,7 +227,10 @@ module.exports = {
         test: /\.css$/,
         exclude: /\.module\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
+          {
+            loader: require.resolve('to-string-loader')
+          },
           {
             loader: require.resolve('css-loader'),
             options: {
